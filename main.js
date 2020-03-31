@@ -27,5 +27,21 @@ $("body").on("keyup keydown keypress change", ".department input",
 		}
 		$(".total_budget span").text(running_total);
 
+		let budgetCount = $("#budget_count");
+		let budgetWordsError = $("#budget_words_error");
+		let budgetWordsWarning = $("#budget_words_warning");
+
+		if (budgetCount.text() >= 0 && budgetCount.text() <= 20) {
+			budgetWordsWarning.text("You are getting close to budget. Make good choices.");
+			budgetWordsError.text("");
+		} else if (budgetCount.text() < 0) {
+			budgetWordsWarning.text("");
+			budgetWordsError.text("You are over budget! Make some changes. ");
+		} else {
+			budgetWordsWarning.text("");
+			budgetWordsError.text("");
+		};
+
+
 
 	});
