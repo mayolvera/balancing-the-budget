@@ -44,11 +44,19 @@ html, body {
 }
 
 .total_budget.warning {
-    color: #e8d82a;
+    color: #ff9900;
 }
 
 .total_budget.error {
     font-weight: bold;
+    color: #FF4D00;
+}
+
+#budget_words_warning {
+    color: #ff9900;
+}
+
+#budget_words_error {
     color: #FF4D00;
 }
 
